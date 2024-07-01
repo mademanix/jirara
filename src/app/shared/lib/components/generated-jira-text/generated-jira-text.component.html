@@ -1,0 +1,11 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Wygenerowany tekst</mat-card-title>
+    <mat-card-subtitle>Bądź pochwalony za raporty!</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider/>
+  <mat-card-content>
+    <button mat-button [cdkCopyToClipboard]="generatedText" (click)="textCopied()">Skopiuj tekst do schowka</button>
+    <pre style="text-wrap: wrap; font-size: 12px">{{ generatedText }}</pre>
+  </mat-card-content>
+</mat-card>

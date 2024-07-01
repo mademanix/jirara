@@ -14,6 +14,7 @@
             aria-labelledby="desc-type-label"
             formControlName="type"
             class="example-radio-group"
+
           >
             @for(type of descType; track type) {
               <mat-radio-button class="example-radio-button" [value]="type.id">{{ type.value }}</mat-radio-button>
@@ -32,25 +33,16 @@
                 [max]="25"
               >
             </mat-form-field>
-            <button mat-button (click)="forceGenerate()">Generuj ponownie</button>
+
           }
         </form>
+        <button mat-button (click)="forceGenerate()">Generuj ponownie</button>
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
     @if(generatedText$ | async; as generatedText) {
-      <div style="margin-left: 16px; margin-right: 16px">
-        <mat-grid-list cols="2" rowHeight="32px">
-          <mat-grid-tile>
-            <h3>Wygenerowany tekst</h3>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <button mat-button [cdkCopyToClipboard]="generatedText" (click)="textCopied()">Skopiuj tekst do schowka</button>
-          </mat-grid-tile>
-        </mat-grid-list>
-        <pre style="text-wrap: wrap; font-size: 12px">{{ generatedText }}</pre>
-      </div>
+      <app-generated-jira-text [generatedText]="generatedText"/>
     }
   </mat-grid-tile>
 </mat-grid-list>
