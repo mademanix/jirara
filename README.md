@@ -2,6 +2,6 @@
 
 lol lmao wtf
 
-powered with electron and angular
+powered with tauri and angular
 
 releases link https://github.com/mademanix/jirara/releases/
