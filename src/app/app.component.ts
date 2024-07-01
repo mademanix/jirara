@@ -17,11 +17,22 @@ import {CdkCopyToClipboard} from "@angular/cdk/clipboard";
 import {MatButton} from "@angular/material/button";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {GeneratedJiraTextComponent} from "./shared/lib/components/generated-jira-text/generated-jira-text.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ReactiveFormsModule, MatRadioModule, MatCard, MatCardHeader, MatCardTitle, MatCardContent, MatInput, MatFormField, MatLabel, MatDivider, AsyncPipe, JsonPipe, CdkCopyToClipboard, MatButton, MatGridList, MatGridTile],
+  imports: [
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatCard,
+    MatCardHeader,
+    MatCardTitle,
+    MatCardContent,
+    MatInput,
+    MatFormField,
+    MatLabel,
+    MatDivider, AsyncPipe, JsonPipe, CdkCopyToClipboard, MatButton, MatGridList, MatGridTile, GeneratedJiraTextComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

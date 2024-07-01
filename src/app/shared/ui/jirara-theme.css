@@ -1,0 +1,147 @@
+
+:root {
+  /*
+    Change this parameters to update your theme
+  */
+  --my-theme-h: 221;
+  --my-theme-s: 97;
+  --my-theme-l: 46;
+  --my-theme-contrast-threshold: 91%;
+}
+
+:root {
+  /*
+    This is your CSS variables.
+    Example:
+        background: var(--my-theme-500);
+        color: var(--my-theme-500-contrast);
+
+    To change opacity of your color, use ...-h, ...-s and ...-l variables.
+    Example:
+        background-color: hsla( var(--my-theme-300-h), var(--my-theme-300-s), var(--my-theme-300-l), 70%);
+  */
+  --my-theme: hsla(var(--my-theme-h), calc(var(--my-theme-s) * 1%), calc(var(--my-theme-l) * 1%), 100%);
+
+  --my-theme-50-h: var(--my-theme-h);
+  --my-theme-50-s: calc(((var(--my-theme-s) - var(--mtc-light-s)) * var(--mtc-s-50) + var(--mtc-light-s)) * 1%);
+  --my-theme-50-l: calc(((var(--my-theme-l) - var(--mtc-light-l)) * var(--mtc-l-50) + var(--mtc-light-l)) * 1%);
+  --my-theme-50: hsl(var(--my-theme-50-h), var(--my-theme-50-s), var(--my-theme-50-l));
+  --my-theme-50-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-50)) * 100 + var(--mtc-l-50) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-100-h: var(--my-theme-h);
+  --my-theme-100-s: calc(((var(--my-theme-s) - var(--mtc-light-s)) * var(--mtc-s-100) + var(--mtc-light-s)) * 1%);
+  --my-theme-100-l: calc(((var(--my-theme-l) - var(--mtc-light-l)) * var(--mtc-l-100) + var(--mtc-light-l)) * 1%);
+  --my-theme-100: hsl(var(--my-theme-100-h), var(--my-theme-100-s), var(--my-theme-100-l));
+  --my-theme-100-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-100)) * 100 + var(--mtc-l-100) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-200-h: var(--my-theme-h);
+  --my-theme-200-s: calc(((var(--my-theme-s) - var(--mtc-light-s)) * var(--mtc-s-200) + var(--mtc-light-s)) * 1%);
+  --my-theme-200-l: calc(((var(--my-theme-l) - var(--mtc-light-l)) * var(--mtc-l-200) + var(--mtc-light-l)) * 1%);
+  --my-theme-200: hsl(var(--my-theme-200-h), var(--my-theme-200-s), var(--my-theme-200-l));
+  --my-theme-200-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-200)) * 100 + var(--mtc-l-200) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-300-h: var(--my-theme-h);
+  --my-theme-300-s: calc(((var(--my-theme-s) - var(--mtc-light-s)) * var(--mtc-s-300) + var(--mtc-light-s)) * 1%);
+  --my-theme-300-l: calc(((var(--my-theme-l) - var(--mtc-light-l)) * var(--mtc-l-300) + var(--mtc-light-l)) * 1%);
+  --my-theme-300: hsl(var(--my-theme-300-h), var(--my-theme-300-s), var(--my-theme-300-l));
+  --my-theme-300-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-300)) * 100 + var(--mtc-l-300) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-400-h: var(--my-theme-h);
+  --my-theme-400-s: calc(((var(--my-theme-s) - var(--mtc-light-s)) * var(--mtc-s-400) + var(--mtc-light-s)) * 1%);
+  --my-theme-400-l: calc(((var(--my-theme-l) - var(--mtc-light-l)) * var(--mtc-l-400) + var(--mtc-light-l)) * 1%);
+  --my-theme-400: hsl(var(--my-theme-400-h), var(--my-theme-400-s), var(--my-theme-400-l));
+  --my-theme-400-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-400)) * 100 + var(--mtc-l-400) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-500-h: var(--my-theme-h);
+  --my-theme-500-s: calc(var(--my-theme-s) * 1%);
+  --my-theme-500-l: calc(var(--my-theme-l) * 1%);
+  --my-theme-500: var(--my-theme);
+  --my-theme-500-contrast: hsl(0, 0%, calc(((var(--my-theme-l) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-600-h: var(--my-theme-h);
+  --my-theme-600-s: calc(((1 - var(--mtc-s-600)) * 100 + var(--mtc-s-600) * var(--my-theme-s)) * 1%);
+  --my-theme-600-l: calc(((1 - var(--mtc-l-600)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-600) * var(--my-theme-l)) * 1%);
+  --my-theme-600: hsl(var(--my-theme-600-h), var(--my-theme-600-s), var(--my-theme-600-l));
+  --my-theme-600-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-600)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-600) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-700-h: var(--my-theme-h);
+  --my-theme-700-s: calc(((1 - var(--mtc-s-700)) * 100 + var(--mtc-s-700) * var(--my-theme-s)) * 1%);
+  --my-theme-700-l: calc(((1 - var(--mtc-l-700)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-700) * var(--my-theme-l)) * 1%);
+  --my-theme-700: hsl(var(--my-theme-700-h), var(--my-theme-700-s), var(--my-theme-700-l));
+  --my-theme-700-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-700)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-700) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-800-h: var(--my-theme-h);
+  --my-theme-800-s: calc(((1 - var(--mtc-s-800)) * 100 + var(--mtc-s-800) * var(--my-theme-s)) * 1%);
+  --my-theme-800-l: calc(((1 - var(--mtc-l-800)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-800) * var(--my-theme-l)) * 1%);
+  --my-theme-800: hsl(var(--my-theme-800-h), var(--my-theme-800-s), var(--my-theme-800-l));
+  --my-theme-800-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-800)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-800) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-900-h: var(--my-theme-h);
+  --my-theme-900-s: calc(((1 - var(--mtc-s-900)) * 100 + var(--mtc-s-900) * var(--my-theme-s)) * 1%);
+  --my-theme-900-l: calc(((1 - var(--mtc-l-900)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-900) * var(--my-theme-l)) * 1%);
+  --my-theme-900: hsl(var(--my-theme-900-h), var(--my-theme-900-s), var(--my-theme-900-l));
+  --my-theme-900-contrast: hsl(0, 0%, calc(((((1 - var(--mtc-l-900)) * var(--my-theme-l) * var(--my-theme-l) / 100 + var(--mtc-l-900) * var(--my-theme-l)) * 1%) - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-A100-h: calc(var(--my-theme-h) * var(--mtc-h-A100));
+  --my-theme-A100-s: calc(var(--mtc-s-A100) * 100%);
+  --my-theme-A100-l: calc(var(--mtc-l-A100) * 100%);
+  --my-theme-A100: hsl(var(--my-theme-A100-h), var(--my-theme-A100-s), var(--my-theme-A100-l));
+  --my-theme-A100-contrast: hsl(0, 0%, calc((var(--mtc-l-A100) * 100% - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-A200-h: calc(var(--my-theme-h) * var(--mtc-h-A200));
+  --my-theme-A200-s: calc(var(--mtc-s-A200) * 100%);
+  --my-theme-A200-l: calc(var(--mtc-l-A200) * 100%);
+  --my-theme-A200: hsl(var(--my-theme-A200-h), var(--my-theme-A200-s), var(--my-theme-A200-l));
+  --my-theme-A200-contrast: hsl(0, 0%, calc((var(--mtc-l-A200) * 100% - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-A400-h: calc(var(--my-theme-h) * var(--mtc-h-A400));
+  --my-theme-A400-s: calc(var(--mtc-s-A400) * 100%);
+  --my-theme-A400-l: calc(var(--mtc-l-A400) * 100%);
+  --my-theme-A400: hsl(var(--my-theme-A400-h), var(--my-theme-A400-s), var(--my-theme-A400-l));
+  --my-theme-A400-contrast: hsl(0, 0%, calc((var(--mtc-l-A400) * 100% - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+
+  --my-theme-A700-h: calc(var(--my-theme-h) * var(--mtc-h-A700));
+  --my-theme-A700-s: calc(var(--mtc-s-A700) * 100%);
+  --my-theme-A700-l: calc(var(--mtc-l-A700) * 100%);
+  --my-theme-A700: hsl(var(--my-theme-A700-h), var(--my-theme-A700-s), var(--my-theme-A700-l));
+  --my-theme-A700-contrast: hsl(0, 0%, calc((var(--mtc-l-A700) * 100% - var(--my-theme-contrast-threshold, 50%)) * (-100)));
+}
+
+:root {
+  /*
+    Color weights
+  */
+  --mtc-h-A100: 1;
+  --mtc-h-A200: 1;
+  --mtc-h-A400: 1;
+  --mtc-h-A700: 1.01;
+  --mtc-s-50: 0.91;
+  --mtc-s-100: 0.98;
+  --mtc-s-200: 0.96;
+  --mtc-s-300: 0.95;
+  --mtc-s-400: 0.96;
+  --mtc-s-600: 1;
+  --mtc-s-700: 0.99;
+  --mtc-s-800: 0.89;
+  --mtc-s-900: 0.86;
+  --mtc-s-A100: 0.89;
+  --mtc-s-A200: 0.98;
+  --mtc-s-A400: 0.97;
+  --mtc-s-A700: 0.95;
+  --mtc-l-50: 0.12;
+  --mtc-l-100: 0.3;
+  --mtc-l-200: 0.5;
+  --mtc-l-300: 0.7;
+  --mtc-l-400: 0.86;
+  --mtc-l-600: 0.87;
+  --mtc-l-700: 0.66;
+  --mtc-l-800: 0.45;
+  --mtc-l-900: 0.16;
+  --mtc-l-A100: 0.76;
+  --mtc-l-A200: 0.64;
+  --mtc-l-A400: 0.49;
+  --mtc-l-A700: 0.44;
+  --mtc-light-h: 0;
+  --mtc-light-s: 0;
+  --mtc-light-l: 100;
+}
